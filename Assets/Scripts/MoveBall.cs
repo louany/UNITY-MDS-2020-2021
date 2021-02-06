@@ -8,17 +8,12 @@ public class MoveBall : MonoBehaviour
   private SpriteRenderer sprite;
   // Renderer renderer;
   private Color initialColor;
-
   private Vector3 initialPosition;
-
-  void Awake() 
-  {
-    initialPosition = transform.position;
-  }
   void Start()
   {
     sprite = GetComponent<SpriteRenderer>();
     initialColor = sprite.color;
+    initialPosition = transform.position;
   }
   void FixedUpdate()
   {
