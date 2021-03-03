@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -271,6 +272,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b83c3d06cb21a04599dbed119f62cdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goal: {fileID: 0}
+  ball: {fileID: 1565061039}
+  player1: {fileID: 10633797}
+  player2: {fileID: 619691139}
 --- !u!1 &619691139 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6158284583810049218, guid: 848b507f6fe20b14ea18cba3e98cf195, type: 3}
@@ -679,6 +696,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 10633797}
+    - target: {fileID: 2707890477645877107, guid: b99419cd370d0724aa42c8986cc6df8b, type: 3}
+      propertyPath: global
+      value: 
+      objectReference: {fileID: 519420028}
     - target: {fileID: 8030969749928723054, guid: b99419cd370d0724aa42c8986cc6df8b, type: 3}
       propertyPath: m_Color.r
       value: 0.31933072
@@ -846,6 +867,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 619691139}
+    - target: {fileID: 4775764790597981619, guid: 67fc467660e3b9343a9813b3da970315, type: 3}
+      propertyPath: global
+      value: 
+      objectReference: {fileID: 519420028}
     - target: {fileID: 7284372204861931325, guid: 67fc467660e3b9343a9813b3da970315, type: 3}
       propertyPath: m_Name
       value: goalL

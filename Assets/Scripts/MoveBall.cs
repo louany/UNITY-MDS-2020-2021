@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class MoveBall : MonoBehaviour
@@ -6,7 +7,7 @@ public class MoveBall : MonoBehaviour
   public float Speed = 3;
   private DateTime _nextChangeTime = DateTime.Now;
   private SpriteRenderer sprite;
-  // Renderer renderer;
+  public GameObject fx;
   private Color initialColor;
   private Vector3 initialPosition;
   void Start()
@@ -30,9 +31,15 @@ public class MoveBall : MonoBehaviour
     {
       sprite.color = new Color(2, 0, 0);
       _nextChangeTime = DateTime.Now.AddMilliseconds(150);
+      StartCoroutine(instantiateFx());
     }
   }
-
+  IEnumerator instantiateFx()
+  {
+      GameObject temporaryFx = Instantiate(fx,transform.position, Quaternion.identity);
+      yield return new WaitForSeconds(0.2f);
+      Destroy(temporaryFx);
+  }
   public Vector3 getInitialPosition() {
     return this.initialPosition;
   }

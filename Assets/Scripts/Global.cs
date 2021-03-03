@@ -37,9 +37,15 @@ public class Global : MonoBehaviour
     {
         moveBallRigidbody.isKinematic = false;
         moveBallRigidbody.velocity = Vector3.zero;
+        animateGirl1.enabled = false;
+        animateGirl2.enabled = false;
+        animateGirl1.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        animateGirl2.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         yield return new WaitForSeconds (time);
         moveBall.transform.position = moveBall.getInitialPosition();
         animateGirl1.transform.position = animateGirl1.getInitialPosition();
         animateGirl2.transform.position = animateGirl2.getInitialPosition();
+        animateGirl1.enabled = true;
+        animateGirl2.enabled = true;
     }
 }
